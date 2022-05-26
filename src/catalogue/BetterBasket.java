@@ -36,7 +36,18 @@ public class BetterBasket extends Basket implements Serializable
       }
     }
 
-    return super.add(pr);
+    if (this.size()==0){
+      return super.add(pr);
+    }else {
+      for (int i = 0; i < this.size(); i++) {
+        if(pr.getProductNum().compareTo(this.get(i).getProductNum()) < 0){
+          super.add(i, pr);
+          return true;
+        }
+      }
+      super.add( this.size(), pr );
+      return true;// Call add in ArrayList
+    }
   }
   // You need to add code here
 }
