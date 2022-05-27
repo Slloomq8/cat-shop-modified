@@ -8,7 +8,7 @@ import java.util.Collections;
  * that adds products while sorting and also ensures no duplicate
  * product is added to the list instead it increments the quantity of that
  * product
- * 
+ *
  * @author  Your Name 
  * @version 1.0
  */
@@ -48,6 +48,16 @@ public class BetterBasket extends Basket implements Serializable
       super.add( this.size(), pr );
       return true;// Call add in ArrayList
     }
+  }
+
+  @Override
+  public Product remove(int i){
+    Product pr = this.get(i);
+    if (pr.getQuantity() > 1){
+      pr.setQuantity(pr.getQuantity()-1);
+      return pr;
+    }
+    return super.remove(i);
   }
   // You need to add code here
 }

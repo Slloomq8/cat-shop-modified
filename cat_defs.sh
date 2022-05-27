@@ -41,13 +41,14 @@ fi;
 # check if that all worked, and print a warning if not
 # don't stop, but other things probably won't work later
 if [ -z "$JAVA_HOME" ]; then
+	# shellcheck disable=SC2016
 	echo 'Warning: cannot find JAVA JDK directory - set $JAVA_HOME manually'
-fi
+fi;
 
 # set the path separator - most unix systems will use : but git-bash on windows needs ;
 SEP=":"
 DIRSEP="/"
-if [ ${path:0:3} == "/c/" ] ; then SEP=";" ; DIRSEP="\\" ; fi
+if [ "${path:0:3}" == "/c/" ] ; then SEP=";" ; DIRSEP="\\" ; fi
 export SEP 
 export DIRSEP
 
@@ -57,7 +58,7 @@ export DIRSEP
 if [ -z "$WORKSPACE" ]
 then
     WORKSPACE=.
-fi
+fi;
 # --------------------------------------------------------------------
 # Base of derby database system
 # --------------------------------------------------------------------
