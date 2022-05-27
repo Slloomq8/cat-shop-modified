@@ -27,10 +27,10 @@ javac  ${DEPRECATED} ${FLAGS} -cp "${CP_JUNIT5}" \
 	src/clients/*.java \
 	src/remote/*.java \
 	src/debug/*.java \
-	src/clients/backdoor/*.java \
+	src/clients/backDoor/*.java \
 	src/clients/cashier/*.java \
 	src/clients/collection/*.java \
 	src/clients/customer/*.java \
 	src/clients/shopDisplay/*.java \
 	src/clients/warehousePick/*.java \
-	
+
