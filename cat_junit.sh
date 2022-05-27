@@ -7,7 +7,7 @@
 # You can give this script more specific testing arguments, if you want a task
 # which doesn't test everything (check out documentation for 
 # 'junit-platform-console-standalone')
-
-. cat_defs.sh
+sudo chmod +x cat_defs.sh
+./cat_defs.sh
 
 java -jar "${JUNIT5}${DIRSEP}junit-platform-console-standalone-1.6.2.jar" -cp "${CP_CATSHOP}" $*
