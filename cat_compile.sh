@@ -5,7 +5,7 @@
 # Note: if you add new clients to catshop, you need to add them to the list
 # of files to compile here
 
-./cat_defs.sh
+. cat_defs.sh
 
 # compiler configuration options
 DEPRECATED=
